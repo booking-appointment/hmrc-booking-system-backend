@@ -15,48 +15,56 @@ namespace hmrc_booking_system_backend
         {
             Configuration = configuration;
         }
-
+        
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddDbContext<MyDbContext>(options =>
-                options.UseNpgsql(
-                    Configuration.GetConnectionString("DefaultConnection")
-                )
-            );
-            services.AddControllersWithViews();
-
+            // try grab the db connection string for Heroku first.
+            string connectionString = ConfigurationHelper.GetHerokuConnectionString();
             
+            // if failed, try to grab a connection string from env (for docker dev)
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                // if not found in env, assume it is in local dev environment and use the db conn string from config file.
+                connectionString = 
+                    Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") 
+                        ?? Configuration.GetConnectionString("DefaultConnection");
+            }
+            
+            
+            services.AddDbContext<MyDbContext>(options =>
+                options.UseNpgsql(connectionString)
+            );
+            
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            });
+
+            // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
+            
+            
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
-            });
+            app.UseAuthorization();
+            
+            app.UseCors("AllowAllOrigins");
+
+            app.UseEndpoints((endpoints => { endpoints.MapControllers();}));
 
         }
     }

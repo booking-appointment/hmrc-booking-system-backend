@@ -1,10 +1,14 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine as build
-WORKDIR /app
-COPY . .
-RUN dotnet restore
-RUN dotnet publish -o /app/published-app
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
+WORKDIR /src
+COPY . /src/ 
+RUN dotnet publish -c release -o /app
+COPY . .
+
+# Run production app with another image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
 WORKDIR /app
-COPY --from=build /app/published-app /app
-ENTRYPOINT [ "dotnet", "/app/hmrc-booking-system-backend.dll" ]
+COPY --from=build /app ./ 
+
+# Set port 
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet hmrc_booking_system_backend.dll
