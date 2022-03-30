@@ -22,7 +22,7 @@ namespace hmrc_booking_system_backend
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<MyDBContext>(options =>
+            services.AddDbContext<MyDbContext>(options =>
                 options.UseNpgsql(
                     Configuration.GetConnectionString("DefaultConnection")
                 )
