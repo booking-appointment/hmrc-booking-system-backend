@@ -7,7 +7,7 @@ orbs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
-  # build-and-test:
+  build-and-test:
     # working_directory: ~/psql_api_heroku
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
@@ -32,10 +32,10 @@ jobs:
 workflows:
   build_and_test_deploy:
     jobs:
-      # - build-and-test
-      - heroku/deploy-via-git
-          # requires:
-            # - build-and-test
+      - build-and-test
+      - heroku/deploy-via-git:
+          requires:
+            - build-and-test
           filters:
             branches:
               only: main
