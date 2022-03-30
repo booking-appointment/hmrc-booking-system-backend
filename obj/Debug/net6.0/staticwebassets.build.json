@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "u0Z9E1o3mJjH+JNV/5cBL/XJXinzEfGe9ToxEp+M9Q0=",
+  "Source": "hmrc-booking-system-backend",
+  "BasePath": "_content/hmrc-booking-system-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rachel.howell/Desktop/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj": {}
+    "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj": {}
   },
   "projects": {
-    "/Users/rachel.howell/Desktop/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj": {
+    "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rachel.howell/Desktop/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
+        "projectUniqueName": "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
         "projectName": "hmrc-booking-system-backend",
-        "projectPath": "/Users/rachel.howell/Desktop/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
-        "packagesPath": "/Users/rachel.howell/.nuget/packages/",
-        "outputPath": "/Users/rachel.howell/Desktop/hmrc-booking-system-backend/obj/",
+        "projectPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
+        "packagesPath": "/Users/joe.folkard/.nuget/packages/",
+        "outputPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rachel.howell/.nuget/NuGet/NuGet.Config"
+          "/Users/joe.folkard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
