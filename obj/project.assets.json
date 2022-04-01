@@ -9680,19 +9680,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/joe.folkard/.nuget/packages/": {}
+    "/Users/tarik.merrylees/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
+      "projectUniqueName": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
       "projectName": "hmrc-booking-system-backend",
-      "projectPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
-      "packagesPath": "/Users/joe.folkard/.nuget/packages/",
-      "outputPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/obj/",
+      "projectPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/hmrc-booking-system-backend.csproj",
+      "packagesPath": "/Users/tarik.merrylees/.nuget/packages/",
+      "outputPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/joe.folkard/.nuget/NuGet/NuGet.Config"
+        "/Users/tarik.merrylees/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
