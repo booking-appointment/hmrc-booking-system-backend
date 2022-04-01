@@ -38,7 +38,7 @@ workflows:
             - build-and-test
           filters:
             branches:
-              only: testBranch
+              only: main
 
 
 # orbs:
