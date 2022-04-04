@@ -8,30 +8,30 @@ using Microsoft.EntityFrameworkCore.Sqlite;
 using NUnit.Framework;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
-using project.Data;
+using hmrc_booking_system_backend.Data;
 
 namespace tests;
 public class TestNotesController
 {
     private HttpClient _httpClient;
-    private readonly WebApplicationFactory<project.Startup> _factory;
+    private readonly WebApplicationFactory<hmrc_booking_system_backend.Startup> _factory;
     
 
     public TestNotesController()
     {
         
-        _factory = new WebApplicationFactory<project.Startup>().WithWebHostBuilder(builder =>
+        _factory = new WebApplicationFactory<hmrc_booking_system_backend.Startup>().WithWebHostBuilder(builder =>
             {
                 builder.ConfigureServices(services =>
                 {
                     // remove the dbcontext of actual postgres db and stub it with a in memory sqlite db
-                    var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof (DbContextOptions < PsqlDbContext > ));
+                    var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof (DbContextOptions < MyDbContext > ));
 
                     if (descriptor != null) {
                         services.Remove(descriptor);
                     }
                     
-                    services.AddDbContext<PsqlDbContext>(opt =>
+                    services.AddDbContext<MyDbContext>(opt =>
                         opt.UseInMemoryDatabase("test_database"));
                 });
             }
@@ -59,10 +59,10 @@ public class TestNotesController
     // [Test]
     // public void PostNotes_responds_with_200()
     // {
-    //     var options = new DbContextOptionsBuilder<PsqlDbContext>()
+    //     var options = new DbContextOptionsBuilder<MyDbContext>()
     //         .UseInMemoryDatabase(databaseName: "Test")
     //         .Options;
-    //     var mockContext = new PsqlDbContext(options);
+    //     var mockContext = new MyDbContext(options);
     //
     //     var controller = new NotesController(mockContext);
     //     var newNote = new Note();
