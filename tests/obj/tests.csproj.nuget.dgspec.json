@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/tests/tests.csproj": {}
+    "/Users/joe.folkard/code/hmrc-booking-system-backend/tests/tests.csproj": {}
   },
   "projects": {
-    "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj": {
+    "/Users/joe.folkard/code/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj",
+        "projectUniqueName": "/Users/joe.folkard/code/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj",
         "projectName": "hmrc-booking-system-backend",
-        "projectPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj",
-        "packagesPath": "/Users/tarik.merrylees/.nuget/packages/",
-        "outputPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/obj/",
+        "projectPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj",
+        "packagesPath": "/Users/joe.folkard/.nuget/packages/",
+        "outputPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tarik.merrylees/.nuget/NuGet/NuGet.Config"
+          "/Users/joe.folkard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -87,17 +87,17 @@
         }
       }
     },
-    "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/tests/tests.csproj": {
+    "/Users/joe.folkard/code/hmrc-booking-system-backend/tests/tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/tests/tests.csproj",
+        "projectUniqueName": "/Users/joe.folkard/code/hmrc-booking-system-backend/tests/tests.csproj",
         "projectName": "tests",
-        "projectPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/tests/tests.csproj",
-        "packagesPath": "/Users/tarik.merrylees/.nuget/packages/",
-        "outputPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/tests/obj/",
+        "projectPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/tests/tests.csproj",
+        "packagesPath": "/Users/joe.folkard/.nuget/packages/",
+        "outputPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tarik.merrylees/.nuget/NuGet/NuGet.Config"
+          "/Users/joe.folkard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj": {
-                "projectPath": "/Users/tarik.merrylees/Documents/Academy/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj"
+              "/Users/joe.folkard/code/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj": {
+                "projectPath": "/Users/joe.folkard/code/hmrc-booking-system-backend/app/hmrc-booking-system-backend.csproj"
               }
             }
           }
