@@ -11,6 +11,7 @@ public class MyDbContext : DbContext
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { } 
     
     public DbSet<Note> Notes { get; set; }
+    public DbSet<UserInfo> UserInfo { get; set; }
 
     }
 }
